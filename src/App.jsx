@@ -10,7 +10,8 @@ function App() {
     setLoading(true);
     try {
       //https://taiwanese-hokkien.onrender.com/translate
-      const res = await fetch("http://localhost:5000/translate", {
+      //http://localhost:5000/translate
+      const res = await fetch("https://taiwanese-hokkien.onrender.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
