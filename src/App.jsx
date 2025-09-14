@@ -9,7 +9,7 @@ function App() {
     if (!inputText) return;
     setLoading(true);
     try {
-      const res = await fetch("https://hokkien-backend.onrender.com/translate", {
+      const res = await fetch("https://taiwanese-hokkien.onrender.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
