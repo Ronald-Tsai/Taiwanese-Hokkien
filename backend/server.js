@@ -42,6 +42,13 @@ app.post("/translate", async (req, res) => {
   }
 });
 
+app.post("/test", (req, res) => {
+  const { text } = req.body;
+  console.log("Received from frontend:", text);
+  res.json({ receivedText: text || "No text sent" });
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

@@ -9,15 +9,21 @@ function App() {
     if (!inputText) return;
     setLoading(true);
     try {
-      const res = await fetch("https://taiwanese-hokkien.onrender.com/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          text: inputText,
-          srcLang: "eng_Latn",
-          tgtLang: "nan_Latn",
-        }),
+      // const res = await fetch("https://taiwanese-hokkien.onrender.com/translate", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     text: inputText,
+      //     srcLang: "eng_Latn",
+      //     tgtLang: "nan_Latn",
+      //   }),
+      // });
+      const res = await fetch("https://<your-backend>.onrender.com/test-translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: inputText })
       });
+
 
       const data = await res.json();
       setOutputText(data.translation || "Translation not available yet");
