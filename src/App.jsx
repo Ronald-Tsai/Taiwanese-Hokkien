@@ -18,7 +18,7 @@ function App() {
       //     tgtLang: "nan_Latn",
       //   }),
       // });
-      const res = await fetch("https://<your-backend>.onrender.com/test-translate", {
+      const res = await fetch("https://taiwanese-hokkien.onrender.com/test", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: inputText })
